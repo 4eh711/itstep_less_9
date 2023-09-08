@@ -14,6 +14,3 @@ def timing (func, *args, **kwargs):
 def example_function():
     time.sleep(2)
 
-result, execution_time = timing(example_function)
-print(f"Результат: {result}")
-print(f"Час виконання: {execution_time} секунд")

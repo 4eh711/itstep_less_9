@@ -13,4 +13,4 @@ if response.status_code == 200:
 
     films = bs.find_all('h2')[:10]
     for i in films:
-        print(i.text.strip())
+        print(i.text)

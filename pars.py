@@ -3,10 +3,10 @@ import requests
 
 response = requests.get("https://coinmarketcap.com/")
 if response.status_code == 200:
-    soup = BeautifulSoup(response.text, features="html.parser")
-    soup_list = soup.find_all("a", {"href": "/currencies/bitcoin/#markets"})
-    for elem in soup_list:
-        print(elem)
+    soup = BeautifulSoup(response.text, "html.parser")
+    list = soup.find_all("a", {"href": "/currencies/bitcoin/#markets"})
+    for elem in list:
+        print(elem.text)
 
 
 

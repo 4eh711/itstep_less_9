@@ -5,11 +5,12 @@ url ='https://bank.gov.ua/'
 response = requests.get(url)
 
 if response.status_code == 200:
-    #soup = BeautifulSoup(response.text, 'html.parser')
     bs = BeautifulSoup(response.text, 'html.parser')
-    #print(bs)
-    temp = bs.find('div', {"class":"value-full"})
-    print(temp.text)
+    temp = bs.find_all('div', {"class":"value-full"})
+    for i in temp:
+        print(i.text)
+
+
     #soup_list = soup.find_all("div", {"class":"value-full"})
     #usd_rate = soup_list[0].find("div")
     #print(usd_rate)

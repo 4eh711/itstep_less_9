@@ -1,5 +1,9 @@
+import urllib.request
 import requests
 
-res = requests.get("https://itstep.org/")
+opener = urllib.request.build_opener()
+response = opener.open("https://itstep.org")
+print(response.read())
 
-print(res.text)
+response=requests.get("https://itstep.org")
+print(response.content)

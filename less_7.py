@@ -12,5 +12,5 @@ class GenIt:
 list = [1,2,3,4,5,6,7]
 iterable = GenIt(list)
 
-for _ in iterable:
-    print(_)
+for i in iterable:
+    print(i)
